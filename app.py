@@ -1,12 +1,19 @@
 import streamlit as st
 import pandas as pd
+from pathlib import Path
 
 st.set_page_config(page_title="Endüstriyel Anomali Tespit Sistemi", layout="wide")
 
 st.title("Endüstriyel Enerji Verimliliği ve Anomali Tespit Sistemi")
 st.write("Bu panel, üretim hattı verileri üzerinden anomali tespiti ve enerji tüketimi analizini görselleştirir.")
 
-df = pd.read_csv("analyzed_production_data.csv")
+csv_path = Path("analyzed_production_data.csv")
+
+if not csv_path.exists():
+    st.error("analyzed_production_data.csv dosyası bulunamadı.")
+    st.stop()
+
+df = pd.read_csv(csv_path)
 df["timestamp"] = pd.to_datetime(df["timestamp"])
 
 total_records = len(df)
