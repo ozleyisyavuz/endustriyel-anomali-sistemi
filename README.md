@@ -1,0 +1,1 @@
+# endustriyel-anomali-sistemi
