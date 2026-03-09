@@ -1,4 +1,11 @@
 # Endüstriyel Enerji Verimliliği ve Anomali Tespit Sistemi
+## Görseller
+
+### Sıcaklık Anomalileri
+![Temperature Anomalies](temperature_anomalies.png)
+
+### Güç Tüketimi
+![Power Consumption](power_consumption.png)
 
 Bu proje, endüstriyel bir üretim hattından elde ediliyormuş gibi simüle edilen sensör verileri üzerinden **anomali tespiti**, **enerji tüketimi analizi** ve **veri görselleştirme** yapan yapay zekâ destekli bir prototiptir.
 
@@ -70,9 +77,4 @@ Daha sonra bu veriler üzerinde **Isolation Forest** algoritması kullanılarak 
 - `power_consumption.png`  
   Güç tüketiminin zamana göre değişimini gösterir.
 
-## Kurulum
 
-Projeyi çalıştırmak için gerekli kütüphaneleri yükleyin:
-
-```bash
-python3 -m pip i
